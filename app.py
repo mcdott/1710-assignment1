@@ -45,6 +45,7 @@ def multiplication(number1, number2):
 
 @app.route('/sayntimes/<word>/<n>')
 def say_n_times(word, n):
+    """Display a string (provided by the user) a number(provided by the user) of times, each string separated by a space"""
     number_of_digits_in_n = 0
     for character in n:
         if isdigit(character):
@@ -60,6 +61,7 @@ def say_n_times(word, n):
 
 @app.route('/dicegame')
 def roll_dice():
+    """Display a random integer between 1 and 6, inclusive"""
     result = randint(1, 6)
     if result == 6:
         return f'You rolled a {result}.  You won!'
